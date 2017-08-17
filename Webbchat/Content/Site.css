@@ -1,0 +1,105 @@
+﻿html, body {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #404040;
+	font-family: 'Share Tech Mono', monospace;
+	color: #c0c0c0;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+	max-width: 280px;
+}
+#registrera-bekräftelse,
+#registrera-fel,
+#logga-in-bekräftelse,
+#logga-in-fel,
+#meddelande-bekräftelse,
+#meddelande-fel {
+	visibility: hidden;
+}
+#chat-fält {
+	padding: 0;
+	display: block;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	height: calc(100vh - 220px);
+	border-bottom: 1px solid #c0c0c0;
+}
+#chat-lista {
+	height: 100%;
+}
+#konto-fönster {
+	position: fixed;
+	display: none;
+	width: 300px;
+	height: 300px;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border: 1px solid #a0a0a0;
+	border-radius: 10px;
+	background-color: #404040;
+	color: #a0a0a0;
+}
+#inloggad {
+	display: none;
+}
+td {
+	word-wrap: break-word;
+}
+.meddelande-tid {
+	vertical-align: top;
+	color: #c08080;
+}
+.meddelande-avsändare {
+	text-align: right;
+	vertical-align: top;
+	color: #c0c080
+}
+a {
+	color: #c0c080;
+	font-weight: bold;
+	font-style: normal;
+}
+table {
+	table-layout: fixed;
+	width: 1000px;
+}
+#registrera-container, #logga-in-container {
+	margin: 10px;
+}
+::-webkit-scrollbar {
+	width: 1em;
+	background: #404040;
+}
+::-webkit-scrollbar-track {
+	background: #404040;
+}
+::-webkit-scrollbar-thumb {
+	background: #c0c0c0;
+}
+#konto-fönster-öppna {
+	display: inline-block;
+	text-align: right;
+}
+#meddelande-fält {
+	border: none;
+	color: #c0c0c0;
+	background-color: #404040;
+	resize: none;
+	outline: none;
+}

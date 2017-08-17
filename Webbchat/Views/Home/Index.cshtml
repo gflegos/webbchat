@@ -1,0 +1,54 @@
+﻿<div id="page">
+	@{
+		ViewBag.Title = "Index";
+	}
+	<h1>Chat</h1>
+	<a href="#" id="konto-fönster-öppna">Logga in eller registrera</a>
+	<div id="chat-fält">
+		<!--ul id="chat-lista"></ul-->
+		<table id="chat-tabell">
+			<col width="200" />
+			<col width="140" />
+			<col width="600" />
+		</table>
+	</div>
+	<footer>
+		<div>
+			<!--p id="meddelande-bekräftelse" class="inmatning-meddelande">Skickat</p>
+			<p id="meddelande-fel" class="inmatning-meddelande">Det gick inte att skicka</p-->
+			<form id="skriv-meddelande">
+				<!--input type="text" name="skriv-meddelande-text" id="meddelande-fält" /-->
+				<textarea name="skriv-meddelande-text" id="meddelande-fält" placeholder="Skriv ett meddelande" autocomplete="off"></textarea>
+				<!--input type="submit" id="meddelande-skicka" /-->
+			</form>
+		</div>
+		<div>
+			<div id="inloggad">
+				<p id="inloggad-användarnamn"></p>
+			</div>
+		</div>
+	</footer>
+	<div id="konto-fönster">
+		<div id="registrera-container">
+			<h3>Registrera</h3>
+			<p id="registrera-bekräftelse" class="inmatning-meddelande">Registrerad</p>
+			<p id="registrera-fel" class="inmatning-meddelande">Det gick inte att registrera</p>
+			<form id="registrera">
+				<input type="text" namn="registrera-användarnamn" id="registrera-användarnamn-fält" />
+				<input type="password" namn="registrera-lösenord" id="registrera-lösenord-fält" />
+				<input type="submit" id="registrera-skicka" />
+			</form>
+		</div>
+		<div id="logga-in-container">
+			<h3>Logga in</h3>
+			<p id="logga-in-bekräftelse" class="inmatning-meddelande">Inloggad</p>
+			<p id="logga-in-fel" class="inmatning-meddelande">Det gick inte att logga in</p>
+			<form id="logga-in">
+				<input type="text" namn="logga-in-användarnamn" id="logga-in-användarnamn-fält" />
+				<input type="password" namn="logga-in-lösenord" id="logga-in-lösenord-fält" />
+				<input type="submit" id="logga-in-skicka" />
+			</form>
+			<a href="#" id="logga-ut">Logga ut</a>
+		</div>
+	</div>
+</div>
