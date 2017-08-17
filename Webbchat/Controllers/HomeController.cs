@@ -158,15 +158,16 @@ namespace Webbchat.Controllers {
 			else {
 				läsareId = 0;
 			}
-			var meddelanden = (from meddelande in db.Meddelanden
-							   join användare in db.Användare on meddelande.användarId equals användare.id
-							   where meddelande.id > meddelandeId && (användare.aktiv || användare.id == läsareId)
-							   orderby meddelande.id descending
-							   select new {
-								   id = meddelande.id, text = meddelande.innehåll,
-								   tid = (meddelande.tid - new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc)).TotalSeconds,
-								   användarnamn = användare.namn
-							   }).Take(100).ToArray();
+			var meddelanden = (
+				from meddelande in db.Meddelanden
+				join användare in db.Användare on meddelande.användarId equals användare.id
+				where meddelande.id > meddelandeId && (användare.aktiv || användare.id == läsareId)
+				orderby meddelande.id descending
+				select new {
+					id = meddelande.id, text = meddelande.innehåll,
+					tid = (meddelande.tid - new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc)).TotalSeconds,
+						användarnamn = användare.namn
+				}).Take(100).ToArray();
 			return Json(meddelanden);
 		}
 	}
