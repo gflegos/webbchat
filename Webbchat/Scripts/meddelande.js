@@ -33,6 +33,7 @@ function hämtaMeddelanden() {
 		},
 		dataType: "json",
 		method: "POST",
+		async: false,
 		success: function(data) {
 			var tid;
 			var meddelande;
